@@ -2,7 +2,7 @@
 
 ## Introduction
 
-**About**
+**About** <br>
 Welcome to my personal neovim configuration. The idea of this project was to maximize my efficiency
 and productivty within the terminal. I was exposed to neovim by a popular creator by the name of the
 primeagen. I was fascinated by how quickly he could navigate and edit text files and I wanted exactly
@@ -14,7 +14,7 @@ want to have only exactly what I need to get the job done. A fzf for files, a co
 file navigation for files I am constantly switching between, quality of life settings for clean movement 
 around files, and a barebones minimal lsp that I can turn on and off when needed.
 
-**Plugins**
+**Plugins** <br>
 Below is a list of the plugins that I use for my configuration
 
 - Lazy  (plugin manager)
