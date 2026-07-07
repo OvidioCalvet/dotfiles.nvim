@@ -41,11 +41,12 @@ for your ease of personal configuration, and a quick install and uninstall comma
 
 <br>
 
-### Plugins
+<div align="center">
 <table>
   <tr>
     <td>
 
+### Plugins
 - Lazy  (plugin manager)
 - Vague (colorscheme)
 - Lualine (context line for vim)
@@ -76,6 +77,7 @@ nvim
 </td>
   </tr>
 </table>
+</div>
 
 <br>
 
