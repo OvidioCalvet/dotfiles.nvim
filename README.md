@@ -42,8 +42,9 @@ for your ease of personal configuration, and a quick install and uninstall comma
 <br>
 
 <div align="center">
-<div>
-<div style="display: inline-block; vertical-align: top; text-align: left; margin-right: 4em;">
+<table>
+<tr>
+<td valign="top">
 
 ### Plugins
 - Lazy  (plugin manager)
@@ -57,8 +58,8 @@ for your ease of personal configuration, and a quick install and uninstall comma
 - Fidget (lsp notifications)
 - blink (completion engine)
 
-</div>
-<div style="display: inline-block; vertical-align: top; text-align: left;">
+</td>
+<td valign="top">
 
 ### File Structure
 ```
@@ -73,8 +74,9 @@ nvim
 └── README.md
 ```
 
-</div>
-</div>
+</td>
+</tr>
+</table>
 </div>
 
 <br>
