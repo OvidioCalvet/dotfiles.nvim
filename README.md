@@ -42,10 +42,23 @@ for your ease of personal configuration, and a quick install and uninstall comma
 <br>
 
 <div align="center">
-<table>
-  <tr>
-    <td>
-    <div align="left">
+<div style="display: flex; justify-content: center; gap: 4em;">
+<div align="left">
+
+### Plugins
+- Lazy  (plugin manager)
+- Vague (colorscheme)
+- Lualine (context line for vim)
+- Neoscroll (smoother vim scrolling)
+- Telescope (file fzf)
+- Harpoon (bookmark files)
+- Lazydev (enhanced lua ls)
+- Mason (LSP manager)
+- Fidget (lsp notifications)
+- blink (completion engine)
+
+</div>
+<div align="left">
 
 ### File Structure
 ```
@@ -61,26 +74,7 @@ nvim
 ```
 
 </div>
-</td>
-<td>
-<div align="left">
-
-### Plugins
-- Lazy  (plugin manager)
-- Vague (colorscheme)
-- Lualine (context line for vim)
-- Neoscroll (smoother vim scrolling)
-- Telescope (file fzf)
-- Harpoon (bookmark files)
-- Lazydev (enhanced lua ls)
-- Mason (LSP manager)
-- Fidget (lsp notifications)
-- blink (completion engine)
-
-    </div>
-    </td>
-  </tr>
-</table>
+</div>
 </div>
 
 <br>
