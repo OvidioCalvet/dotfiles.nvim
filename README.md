@@ -11,8 +11,8 @@
 
 <table>
   <tr>
-      <td><img width=100% height="1200" alt="image" src="https://github.com/user-attachments/assets/7e542482-7f02-454d-bfed-e6c6b2648980" /></td>
       <td><img width=100% height="1200" alt="2026-07-06-205328_hyprshot" src="https://github.com/user-attachments/assets/576ab071-32dd-4b53-b704-312146e03a39" /></td>
+      <td><img width=100% height="1200" alt="image" src="https://github.com/user-attachments/assets/7e542482-7f02-454d-bfed-e6c6b2648980" /></td>
   </tr>
 </table>
 
@@ -20,24 +20,35 @@
 
 ### Introduction
 
-Welcome to my personal neovim configuration. The idea of this project was to maximize my efficiency
-and productivty within the terminal. I was exposed to neovim by the primeagen. I was fascinated by 
-how quickly he could navigate and edit text files and I wanted that. I took the time to learn 
-how to use vim motions and got relatively good at them. 
+Welcome to my personal neovim configuration! It was my freshman year of college where I first discoverd the world
+of linux and the power within the terminal. I came across a video from The Primeagen, a very well known creator who
+loves neovim. I watched how fast he could edit files and the depth of knowledge he had within his own editor and I was 
+really inspired to do the same. I decided to have a raspberry pi running with neovim installed and from class I would
+ssh into my pi and practice the vim motions with `:Tutor` and had an absolute blast. I struggled a lot at first but
+quickly after a few weeks I picked up on the patterns and eventually it became second nature and then just preferance.
 
-Here we are today with an extremely minimal and fast configuration that I curated with the vague colorscheme
-which I find really nice on the eyes especially for long programming sessions. The main principle is simple, I
-want to have only exactly what I need to get the job done. A fzf for files, a colorscheme, harpoon for quick
-file navigation for files I am constantly switching between, quality of life settings for clean movement 
-around files, and a barebones minimal lsp that I can turn on and off when needed.
+Here we are today, I have been vimming like a madman for over a year now and haven't looked back since. In case you
+were wondering no I do not use my pi anymore lol. I have linux laptop running arch btw.
+
+I present an extremely minimal and fast configuration that I curated with a colorscheme inspired by The Primeagen
+which I find really nice on the eyes especially for long programming sessions. The essential idea is simple, I
+want to have only exactly what I need to get the job done. A fzf for files, a clean colorscheme, quick file
+navigation for common files used in a codebase, quality of life settings for clean movement around files, and 
+a clean efficient lsp to enhance productivity within a codebase.
+
+Take a look below where I have a list of the plugins that I use to achieve this goal, the file structure
+for your ease of personal configuration, and a quick install and uninstall command to get started.
 
 <br>
 
 ### Plugins
+<table>
+  <tr>
+    <td>
 
 - Lazy  (plugin manager)
 - Vague (colorscheme)
-- Lualine (conext line for vim)
+- Lualine (context line for vim)
 - Neoscroll (smoother vim scrolling)
 - Telescope (file fzf)
 - Harpoon (bookmark files)
@@ -46,7 +57,8 @@ around files, and a barebones minimal lsp that I can turn on and off when needed
 - Fidget (lsp notifications)
 - blink (completion engine)
 
-<br>
+    </td>
+    <td>
 
 ### File Structure
 ```
@@ -60,6 +72,10 @@ nvim
 │       └── lazy.lua
 └── README.md
 ```
+    
+</td>
+  </tr>
+</table>
 
 <br>
 
