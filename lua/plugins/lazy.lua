@@ -1,5 +1,4 @@
 -- [[ Bootstrap Lazy ]] 
---
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.uv.fs_stat(lazypath) then
     local lazyrepo = "https://github.com/folke/lazy.nvim.git"
@@ -123,28 +122,51 @@ require("lazy").setup({
     },
 
     { -- [[ Minimal LSP ]]
-        "neovim/nvim-lspconfig",
-        event = { "BufReadPre", "BufNewFile" },
-        lazy = false,
-        dependencies = {
-            {
-                "williamboman/mason.nvim",
-                config = true,
+        {
+            "mason-org/mason-lspconfig.nvim",
+            opts = {
+                ensure_installed = {
+                    "lua_ls",
+                    "rust_analyzer",
+                    "clangd",
+                    "gopls",
+                    "pyright",
+                    "ts_ls"
+                }
             },
-            {
-                "williamboman/mason-lspconfig.nvim",
-                config = function()
-                    require("mason-lspconfig").setup({
-                        ensure_installed = {
-                            "lua_ls", "clangd", "pyright", "gopls",
-                            "cssls", "html", "tailwindcss", "ts_ls", "eslint"
-                        },
-                        automatic_enable = true
-                    })
-                end,
+            dependencies = {
+                {
+                    "mason-org/mason.nvim",
+                    opts = {
+                        ui = {
+                            icons = {
+                                package_installed = "✓",
+                                package_pending = "➜",
+                                package_uninstalled = "✗"
+                            }
+                        }
+                    },
+                },
+                {
+                    "neovim/nvim-lspconfig",
+                    dependencies = {
+                        'saghen/blink.cmp',
+                    },
+                    config = function()
+                        local capabilities = require("blink.cmp").get_lsp_capabilities()
+                        vim.lsp.config("lua_ls", { capabilities = capabilities })
+                    end,
+                },
             },
-            "folke/lazydev.nvim",
         },
+    },
+
+    { -- [[ LSP notifications ]]
+        "j-hui/fidget.nvim",
+        event = "LspAttach",
+        config = function()
+            require("fidget").setup({})
+        end,
     },
 
     { -- [[ Completion Engine]]
@@ -153,9 +175,8 @@ require("lazy").setup({
         version = 'v0.*',
         opts = {
             keymap = { preset = 'default' },
-            sources = {
-                default = { 'lsp', 'path', 'snippets', 'buffer' },
-            },
+            appearance = { nerd_font_variant = "mono" },
         },
-    }
+        signature = { enabled = true }
+    },
 })
