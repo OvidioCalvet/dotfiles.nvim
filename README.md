@@ -1,6 +1,10 @@
 <div align="center">
     <br>
-    <h1><b>dotfiles.nvim</b></h1>
+    <header>
+        <h3>
+            <b>dotfiles.nvim</b>
+        </h3>
+    </header>
     <br>
 </div>
 
